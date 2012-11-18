@@ -1,4 +1,4 @@
-astropost
+Astropost
 =========
 
 Simple API for posting comments to various Australian news websites.
@@ -12,15 +12,14 @@ Simple Usage
 
 Usage should be simple. Create a post and specify desired fields - any omitted (but required) fields will be randomised.
 
-    >>> p = astropost.Post(name="poster name", email="email@example.com", body="a comment that nobody will read")
+    >>> p = astropost.post.Post(name="poster name", email="email@example.com", body="a comment that nobody will read")
     >>> p.body
     'a comment that nobody will read'
     >>> p.location
-    'Perth, Australia'
+    'Somerandomcityname'
 
 Once a post has been created, we create the desired interface, direct it to the appropriate page and send the post.
 
-    >>> hun = astropost.interfaces.HeraldSun()
-    >>> hun.page('http://www.heraldsun.com.au/news/national/forecasters-take-flak-over-late-alert/story-fndo45r1-1226518825034')
-    >>> hun.post(p)
+    >>> eng = astropost.Engine()
+    >>> eng.post('http://www.heraldsun.com.au/news/national/forecasters-take-flak-over-late-alert/story-fndo45r1-1226518825034', p)
     true
