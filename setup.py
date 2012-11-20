@@ -10,7 +10,7 @@ config = {
     'download_url': 'https://github.com/Murodese/astropost/archive/master.zip',
     'author_email': 'murodese@gmail.com',
     'version': '0.1',
-    'install_requires': ['nose', 'namegen'],
+    'install_requires': ['mechanize', 'faker'],
     'packages': ['astropost'],
     'scripts': [],
     'name': 'astropost'
